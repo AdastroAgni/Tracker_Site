@@ -1,0 +1,294 @@
+/*html,
+body,
+.view{
+    height: 100%;
+}*/
+body{
+    background: rgb(0, 0, 0);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body, html{
+    overflow-x: hidden;
+
+}
+nav{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+#checkbox-menu, 
+.toggle{
+    display: none;
+}
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a{
+   color: rgb(255, 255, 255);
+    text-decoration: none;
+    align-self: center;
+    font-size: 12px;
+    padding: 10px 15px;
+    transition: background .2 linear;
+}
+.menu li a:hover{
+    background: #6600ff;
+    border-radius: 3px;
+}
+.menu li a.logo{
+    font-size: 25px;
+    margin-right: 240px;
+}
+.menu li a.contacts{
+    margin-right: 100px;
+}
+.wapper{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100px;
+}
+.intro{
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.intro-img{       
+    background: url(img/blue_imac_pro_5k.jpg) no-repeat center center;
+    background-size: cover;
+    width: 1920px;
+    height: 1080px;
+}
+
+
+.intro .intro-text{
+    color: aliceblue;
+    position: absolute;
+    font-size: 100px;
+    right: 350px;
+    top: 570px;
+}
+
+.AppleAndWindowsLogo{
+    position: absolute;
+    top: 1200px;
+    left: 300px;
+}
+
+.AppleAndWindowsLogo2{
+    position: absolute;
+    top: 1200px;
+    left: 1100px;
+}
+
+.text-apple{
+    text-indent: 220px;
+}
+
+.text-win{
+    text-indent: 50px;
+}
+
+.pxWin{
+    vertical-align: -90px;
+    color: black;
+}
+
+.sectionsTEXT{
+    padding: 620px 0px;
+    color: white;
+}
+
+.section_header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.news-app{
+    color: white;
+    padding-top: -60px;
+    margin-top: -400px;
+}
+.apartments{
+    background: #000000;
+    padding: 60px 0;
+}
+.apart h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+}
+.card{
+    max-width: 500px;
+    background: rgb(96, 8, 211);
+    box-shadow: 0 0 10px rgba(231, 7, 82, 0.9);
+}
+.card-container{
+    padding: 25px;
+}
+.card-container p:hover{
+    color: rgb(64, 232, 238);
+
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.card-info .money{
+    font-size: 20px;
+    color: #e2127A;
+}
+.card-info i{
+    margin-right: 10px;
+}
+.card-info span:first-child{
+    margin-right: 5px;
+}
+.card:hover{
+    background: rgb(93, 5, 233);
+    box-shadow: 0 0 10px rgba(117, 10, 218, 0.9);
+}
+.annon{
+    font-size: 25px;
+    color: white;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 70px;
+    grid-row-gap: 0px;
+}
+
+.apart input[type=text]{
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    border: none;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-position: 27px;
+    outline: none;
+    padding-left: 62px;
+    font-size: 15px;
+    color: #e2127A;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.apart input[type=submit]{
+    width: 115px;
+    border: none;
+    height: 70px;
+    background: #e2127A;
+    font-size: 15px;
+    margin-left: -4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.all{
+    width: 250px;
+    height: 70px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-top: 52px;
+    font-size: 15px;
+}
+.buttons-search{
+    display: flex;
+}
+
+.info i:hover{
+    color: #e2127A;
+
+}
+
+
+  
+
+@media screen and (max-width: 765px){
+    .toggle{
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        background: #6600ff;
+        transition: all .1s linear;
+    }
+    .toggle:hover{
+        background: #4c00ffbd;
+    }
+    #checkbox-menu:checked + label .touch li{
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    #checkbox-menu:checked + label .touch{
+        height: 350px;    
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0;
+        transition: height .3s linear;
+    }
+    menu li{
+       display: flex;
+       align-self: center;
+       width: 95%;
+       opacity: 0;
+       visibility: hidden;
+    }
+    .menu li a{
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu li a.logo{
+        font-size: 21px;
+        margin-right: 0px;
+    }
+    .menu li a.contacts{
+        margin-right: 0px;
+}
+.intro{
+    margin-top: 0;
+    display: block;
+    max-width: 100%;
+}
+.intro-img{
+    background-position: bottom 50px right 570px;
+
+}.intro .intro-text{
+    position: relative;
+    font-size: 35px;
+    right: -10px;
+    top: 95px;
+}
+.cards{
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gab: 10px;
+    justify-items: center;
+}
